@@ -21,7 +21,7 @@ using Microsoft.VisualStudio.Shell;
 using Company.VisualStudioHaskell;
 
 namespace VisualStudioHaskell_UnitTests.MenuItemTests {
-    [TestClass()]
+    /*[TestClass()]
     public class MenuItemTest {
         /// <summary>
         /// Verify that a new menu command object gets added to the OleMenuCommandService. 
@@ -80,5 +80,5 @@ namespace VisualStudioHaskell_UnitTests.MenuItemTests {
             serviceProvider.RemoveService(typeof(SVsUIShell));
 
         }
-    }
+    }*/
 }

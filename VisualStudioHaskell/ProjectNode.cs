@@ -18,6 +18,18 @@ namespace Company.VisualStudioHaskell
             _package = package;
         }
 
+        protected override NodeProperties CreatePropertiesObject()
+        {
+            return new ProjectNodeProperties(this);
+        }
+
+        protected override Guid[] GetConfigurationIndependentPropertyPages()
+        {
+            return new[]{
+                typeof(Project.TestPropertyPage).GUID
+            };
+        }
+
         #region Abstract property implementation (incomplete)
 
         public override Guid ProjectGuid

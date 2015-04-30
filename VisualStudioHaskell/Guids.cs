@@ -13,9 +13,13 @@ namespace Company.VisualStudioHaskell
         public const string guidVisualStudioHaskellProjectFactoryString = "C11D8F88-2496-43A0-8758-6690DFD8C552";
         public const string guidVisualStudioHaskellLanguageServiceString = "1F718404-7D42-4909-9EA1-DA20A104EA71";
 
+        public const string guidVisualStudioHaskellTestProperyPageString = "3F172912-3708-4B2E-85FF-059DB64F5736";
+
         public static readonly Guid guidVisualStudioHaskellCmdSet = new Guid(guidVisualStudioHaskellCmdSetString);
         public static readonly Guid guidVisualStudioHaskellEditorFactory = new Guid(guidVisualStudioHaskellEditorFactoryString);
         public static readonly Guid guidVisualStudioHaskellProjectFactory = new Guid(guidVisualStudioHaskellProjectFactoryString);
         public static readonly Guid guidVisualStudioHaskellLanguageService = new Guid(guidVisualStudioHaskellLanguageServiceString);
+
+        public static readonly Guid guidVisualStudioHaskellTestProperyPage = new Guid(guidVisualStudioHaskellProjectFactoryString);
     };
 }

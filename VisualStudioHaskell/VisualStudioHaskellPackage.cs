@@ -72,6 +72,8 @@ namespace Company.VisualStudioHaskell
         "Templates\\Projects\\HaskellProject",
         LanguageVsTemplate = "HaskellProject")]
 
+    [ProvideObject(typeof(Project.TestPropertyPage))]
+
     [Guid(GuidList.guidVisualStudioHaskellPkgString)]
     public sealed class VisualStudioHaskellPackage : CommonPackage
     {
@@ -136,6 +138,8 @@ namespace Company.VisualStudioHaskell
             var hsService = _hsService = new Service(services);
 
             services.AddService(typeof(Service), hsService, promote: true);
+
+            services.AddService(typeof(IClipboardService), new ClipboardService(), promote: true);
 
             this.RegisterProjectFactory(new ProjectFactory(this));
 

@@ -27,7 +27,7 @@ namespace VisualStudioHaskell_IntegrationTests {
                 testContextInstance = value;
             }
         }
-
+        /*
         /// <summary>
         ///A test for lauching the command and closing the associated dialogbox
         ///</summary>
@@ -50,7 +50,7 @@ namespace VisualStudioHaskell_IntegrationTests {
                     Assert.IsTrue(purger.WaitForDialogThreadToTerminate(), "The dialog box has not shown");
                 }
             });
-        }
+        }*/
 
     }
 }
