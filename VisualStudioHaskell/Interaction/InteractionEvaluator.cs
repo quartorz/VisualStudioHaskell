@@ -56,6 +56,7 @@ namespace Company.VisualStudioHaskell.Interaction
 
         private void Connect()
         {
+            // TODO: get ghci path from general options
             var processInfo = new ProcessStartInfo("ghci");
 
             processInfo.CreateNoWindow = true;

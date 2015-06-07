@@ -20,6 +20,7 @@ namespace Company.VisualStudioHaskell
 {
     using Editor;
     using Navigation;
+    using Options;
 
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -73,6 +74,8 @@ namespace Company.VisualStudioHaskell
         LanguageVsTemplate = "HaskellProject")]
 
     [ProvideObject(typeof(Project.TestPropertyPage))]
+
+    [ProvideOptionPage(typeof(GeneralOptionsPage), "Visual Studio Haskell", "General", 110, 113, true)]
 
     [Guid(GuidList.guidVisualStudioHaskellPkgString)]
     public sealed class VisualStudioHaskellPackage : CommonPackage

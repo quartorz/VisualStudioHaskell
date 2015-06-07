@@ -193,6 +193,18 @@
     <Compile Include="Editor\EditorFactory.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Navigation\LibraryManager.cs" />
+    <Compile Include="Options\GeneralOptionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Options\GeneralOptionsControl.Designer.cs">
+      <DependentUpon>GeneralOptionsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options\GeneralOptionsPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Options\HaskellOptionsPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Options\IOptionsService.cs" />
     <Compile Include="Options\OptionsService.cs" />
     <Compile Include="Parsing\Tokenizer.cs" />
@@ -384,6 +396,9 @@
     <Compile Include="SharedProject\Wpf\NativeMethods.cs" />
     <Compile Include="VSMacroRecorder.cs" />
     <EmbeddedResource Include="HaskellImageList.png" />
+    <EmbeddedResource Include="Options\GeneralOptionsControl.resx">
+      <DependentUpon>GeneralOptionsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Project\Resources\imagelis.bmp" />
     <Content Include="Templates\Main.hs">
       <IncludeInVSIX>true</IncludeInVSIX>
