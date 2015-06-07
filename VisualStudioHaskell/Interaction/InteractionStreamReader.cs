@@ -28,8 +28,8 @@ namespace Company.VisualStudioHaskell.Interaction
 
         private void ReadThread()
         {
-            var prompt1 = "Prelude> ";
-            var prompt2 = "Prelude| ";
+            var prompt1 = "> ";
+            var prompt2 = "| ";
 
             var builder = new StringBuilder();
 
@@ -53,13 +53,12 @@ namespace Company.VisualStudioHaskell.Interaction
                 {
                     builder.Append((char)ch);
 
-                    if (builder.Length == prompt1.Length && builder.StartsWith(prompt1))
+                    if (builder.StartsWith("Prelude"))
                     {
-                        builder.Clear();
-                    }
-                    else if (builder.Length == prompt2.Length && builder.StartsWith(prompt2))
-                    {
-                        builder.Clear();
+                        if(builder.EndsWith(prompt1) || builder.EndsWith(prompt2))
+                        {
+                            builder.Clear();
+                        }
                     }
                 }
             }

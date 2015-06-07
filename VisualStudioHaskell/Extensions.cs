@@ -23,7 +23,24 @@ namespace Company.VisualStudioHaskell
                     return false;
                 }
             }
+
             return i == value.Length;
+        }
+
+        public static bool EndsWith(this StringBuilder builder, string value)
+        {
+            if(builder.Length < value.Length)
+                return false;
+
+            for(int i = builder.Length - value.Length, j = 0; i + j < builder.Length; j++)
+            {
+                if (builder[i + j] != value[j])
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         internal static IComponentModel GetComponentModel(this IServiceProvider provider)
